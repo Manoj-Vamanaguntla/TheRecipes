@@ -1,7 +1,7 @@
 # App Name: TheRecipes
 
 # App Logo:
-
+![alt text](RecipesCode/app/src/main/res/drawable/applogo.jpg)
 
 ## Teammates:
 
