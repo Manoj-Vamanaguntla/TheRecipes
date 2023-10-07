@@ -82,15 +82,13 @@
          />
 
     <RadioButton
-        android:id="@+id/ingrediantRBTN"
+        android:id="@+id/ingredientRBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingrediants"
         android:layout_marginTop="25dp"
+        android:text="Ingredients"
         app:layout_constraintTop_toBottomOf="@id/keywordRBTN"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="487dp"
-         />
+        tools:layout_editor_absoluteX="57dp" />
 
     <Button
         android:id="@+id/myaccountBTN"
