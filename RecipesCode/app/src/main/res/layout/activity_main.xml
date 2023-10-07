@@ -4,15 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#C3BC38"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="85dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29"
+        app:srcCompat="@drawable/applogo" />
 
     <TextView
+        android:id="@+id/instructionTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="72dp"
+        android:text="You can create your own recipe"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:layout_editor_absoluteX="61dp"
+        />
+
+    <Button
+        android:id="@+id/createrecipeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Recipe"
+        app:layout_constraintTop_toBottomOf="@id/instructionTV"
+        android:layout_marginTop="25dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="172dp"
+         />
+
+
+    <EditText
+        android:id="@+id/searchET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Search for a Recipe"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintVertical_bias="0.59"
+        app:layout_constraintTop_toBottomOf="@id/createrecipeBTN"
+        tools:layout_editor_absoluteX="61dp"
+         />
+
+    <RadioButton
+        android:id="@+id/recipeRBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recpie Name"
+        app:layout_constraintTop_toBottomOf="@id/searchET"
+        android:layout_marginTop="25dp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <RadioButton
+        android:id="@+id/keywordRBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="keyword"
+        app:layout_constraintTop_toBottomOf="@id/recipeRBTN"
+        tools:layout_editor_absoluteX="59dp"
+         />
+
+    <RadioButton
+        android:id="@+id/ingrediantRBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrediants"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/keywordRBTN"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="487dp"
+         />
+
+    <Button
+        android:id="@+id/myaccountBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="My Account"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="7dp"
+         />
+
+    <Button
+        android:id="@+id/signinBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="SignIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="150dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
