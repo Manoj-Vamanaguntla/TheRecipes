@@ -1,4 +1,5 @@
 package com.example.therecipes;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,8 +32,8 @@ public class SignInActivity extends AppCompatActivity {
                       } }); 
                      registerButton.setOnClickListener(new View.OnClickListener() {    
                          @Override    public void onClick(View v) {         
-                          Create an Intent to navigate to the RegisterActivity        
-                         Intent intent = new Intent(SignInActivity.this, RegisterActivity.class);       
+                          //Create an Intent to navigate to the RegisterActivity
+                         Intent intent = new Intent(SignInActivity.this, RegisterActivity.class);
                            startActivity(intent);     } });
     }
 }

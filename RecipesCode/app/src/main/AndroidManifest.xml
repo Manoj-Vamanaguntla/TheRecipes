@@ -21,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".MainActivity">
+            <!-- Add any intent filters or other configuration for MainActivity -->
+        </activity>
+
+        <activity android:name=".RegisterActivity">
+            <!-- Add any intent filters or other configuration for RegisterActivity -->
+        </activity>
     </application>
 
 </manifest>
