@@ -25,15 +25,18 @@ public class SignInActivity extends AppCompatActivity {
 
         // Set a click listener for the signInButton
         signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override    public void onClick(View v) {        
-                 // Create an Intent to navigate to the MainActivity        
-                 Intent intent = new Intent(SignInActivity.this, MainActivity.class);     
-                     startActivity(intent);    
-                      } }); 
-                     registerButton.setOnClickListener(new View.OnClickListener() {    
-                         @Override    public void onClick(View v) {         
-                          //Create an Intent to navigate to the RegisterActivity
-                         Intent intent = new Intent(SignInActivity.this, RegisterActivity.class);
-                           startActivity(intent);     } });
+            @Override    public void onClick(View v) {
+                // Create an Intent to navigate to the MainActivity
+                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override    public void onClick(View v) {
+                //Create an Intent to navigate to the RegisterActivity
+                Intent intent = new Intent(SignInActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
