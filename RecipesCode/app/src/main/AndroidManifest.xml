@@ -29,6 +29,15 @@
         <activity android:name=".RegisterActivity">
             <!-- Add any intent filters or other configuration for RegisterActivity -->
         </activity>
+        <meta-data
+            android:name="com.parse.SERVER_URL"
+            android:value="https://parseapi.back4app.com/" />
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="T4jyEZhrzfcSJQQ9ANSxMI6BuNzcjzzX6h6sDbNV" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="ksUIefM5sqiqUPY3r7bDMHIy4Od3phIOtFWuwEg8" />
     </application>
 
 </manifest>
