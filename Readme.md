@@ -12,3 +12,7 @@
 
 ### Introduction to our Project
 This Application is mainly used to search for the recipes for a dish. The user can search for the recipes or post their own recipe to the app
+
+## App login details for Test:
+1. Username: test
+2. Password: Test@123
