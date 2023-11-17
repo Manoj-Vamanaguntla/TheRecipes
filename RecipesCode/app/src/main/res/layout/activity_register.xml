@@ -6,35 +6,22 @@
     android:layout_height="match_parent"
     android:background="#C3BC38">
 
-    <Button
-        android:id="@+id/signInBtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SignIn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InfoTV"
-        app:layout_constraintVertical_bias="0.236" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="85dp"
         android:layout_height="55dp"
-        app:layout_constraintBottom_toTopOf="@+id/usernameTV"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29"
         app:srcCompat="@drawable/applogo" />
 
     <TextView
-        android:id="@+id/ConfirmTV"
+        android:id="@+id/confirmTV"
         android:layout_width="88dp"
         android:layout_height="35dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
         android:text="Confirm Password:"
         android:textAlignment="center"
@@ -42,75 +29,75 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordTV" />
 
     <TextView
-        android:id="@+id/NameTV"
+        android:id="@+id/nameTV"
         android:layout_width="88dp"
         android:layout_height="35dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
         android:text="Full Name:"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ConfirmTV" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmTV" />
 
     <TextView
-        android:id="@+id/EmailTV"
+        android:id="@+id/emailTV"
         android:layout_width="88dp"
         android:layout_height="35dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
         android:text="Email:"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NameTV" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTV" />
 
     <EditText
-        android:id="@+id/PasswordET"
-        android:layout_width="243dp"
+        android:id="@+id/passwordET"
+        android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:hint="Enter Password"
-        android:inputType="text|textPassword|textEnableTextConversionSuggestions"
+        android:inputType="text|textPassword"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toEndOf="@+id/passwordTV"
         app:layout_constraintTop_toBottomOf="@+id/usernameET" />
 
     <EditText
-        android:id="@+id/ConfirmET"
-        android:layout_width="243dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:hint="Confrim Password"
-        android:inputType="text|textPassword"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ConfirmTV"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordET" />
-
-    <EditText
-        android:id="@+id/fullnameTV"
-        android:layout_width="243dp"
+        android:id="@+id/confirmET"
+        android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="44dp"
         android:layout_marginTop="20dp"
+        android:hint="Confrim Password"
+        android:inputType="text|textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toEndOf="@+id/confirmTV"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+    <EditText
+        android:id="@+id/fullnameET"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
         android:hint="Enter your fullname"
         android:inputType="text"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/NameTV"
-        app:layout_constraintTop_toBottomOf="@+id/ConfirmET" />
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toEndOf="@+id/nameTV"
+        app:layout_constraintTop_toBottomOf="@+id/confirmET" />
 
     <EditText
         android:id="@+id/emailET"
-        android:layout_width="243dp"
+        android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="44dp"
@@ -119,30 +106,31 @@
         android:inputType="text|textEmailAddress"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/EmailTV"
-        app:layout_constraintTop_toBottomOf="@+id/fullnameTV" />
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toEndOf="@+id/emailTV"
+        app:layout_constraintTop_toBottomOf="@+id/fullnameET" />
 
     <EditText
         android:id="@+id/usernameET"
-        android:layout_width="243dp"
+        android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="24dp"
         android:hint="Enter Your username"
         android:inputType="text"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/usernameTV"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/registerBtn1"
+        android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:onClick="gotoSuccessfulSignUpActivityAction"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,33 +143,22 @@
         android:id="@+id/usernameTV"
         android:layout_width="88dp"
         android:layout_height="35dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
         android:text="Username:"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="110dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/passwordTV"
         android:layout_width="88dp"
         android:layout_height="35dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
         android:text="Password:"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameTV" />
-
-    <TextView
-        android:id="@+id/InfoTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="28dp"
-        android:text="Already Have a Account, please Sign In"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerBtn1"
-        app:layout_constraintVertical_bias="0.018" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

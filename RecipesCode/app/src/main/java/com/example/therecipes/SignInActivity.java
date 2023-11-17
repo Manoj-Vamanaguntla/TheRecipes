@@ -80,7 +80,7 @@ public class SignInActivity extends AppCompatActivity {
                                 username=parseUser.getString("Fullname");
                                 object_id = parseUser.getObjectId();
                                 try {
-                                    Intent toOtherIntent = new Intent(getApplicationContext(), SignInActivity.class);
+                                    Intent toOtherIntent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(toOtherIntent);
                                 } catch (Exception e1) {
                                 }
