@@ -16,3 +16,9 @@ This Application is mainly used to search for the recipes for a dish. The user c
 ## App login details for Test:
 1. Username: test
 2. Password: Test@123
+
+## Individual Contribution:
+1. Manoj Vamanaguntla - worked on login page, home page and database
+1. Chandra Venkata Vijaya Gopala Raju Kalidindi - worked on registration page and database
+2. Prasanna konakanchi - worked on connections of pages
+1. Soujanya Kirni- worked on About Page,Contact us page,Home page
