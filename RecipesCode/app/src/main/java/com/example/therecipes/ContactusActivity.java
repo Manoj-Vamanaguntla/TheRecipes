@@ -39,7 +39,7 @@ public class ContactusActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to the About page
-                startActivity(new Intent(ContactusActivity.this, HomeActivity.class));
+                startActivity(new Intent(ContactusActivity.this, MainActivity.class));
             }
         });
     }

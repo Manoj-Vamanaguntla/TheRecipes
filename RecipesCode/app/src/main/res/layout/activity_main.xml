@@ -1,113 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#C3BC38"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="85dp"
-        android:layout_height="55dp"
-        app:layout_constraintBottom_toTopOf="@+id/instructionTV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29"
-        app:srcCompat="@drawable/applogo" />
-
-    <TextView
-        android:id="@+id/instructionTV"
-        android:layout_width="wrap_content"
+    <!-- Top Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="You can create your own recipe"
-        android:textSize="20dp"
-        app:layout_constraintHorizontal_bias="0.34"
-        app:layout_constraintVertical_bias="0.45"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
-        tools:layout_editor_absoluteX="61dp"
-        />
+        android:orientation="horizontal"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/createrecipeBTN"
-        android:layout_width="wrap_content"
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="85dp"
+            android:layout_height="55dp"
+            android:src="@drawable/applogo"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="145dp"/>
+
+
+        <Button
+            android:id="@+id/signoutBTN"
+            android:layout_width="110dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="45dp"
+            android:onClick="gotosignoutAction"
+            android:text="Sign Out"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/aboutBTN"
+            android:layout_width="110dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="280dp"
+            android:onClick="goToAbout"
+            android:text="About"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/contactusBTN"
+            android:layout_width="110dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="15dp"
+            android:onClick="goToContactUs"
+            android:text="Contact"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+    </LinearLayout>
+
+    <!-- Middle Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Recipe"
-        app:layout_constraintTop_toBottomOf="@id/instructionTV"
-        android:layout_marginTop="25dp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="172dp"
-         />
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <Button
+            android:id="@+id/recipe1BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="gotoSearchRecipe"
+            android:text="Find Recipes"
+            android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/searchET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Search for a Recipe"
-        android:textSize="20dp"
-        app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintVertical_bias="0.59"
-        app:layout_constraintTop_toBottomOf="@id/createrecipeBTN"
-        tools:layout_editor_absoluteX="61dp"
-         />
+        <Button
+            android:id="@+id/recipe2BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="gotoAddNewRecipe"
+            android:text="Add new Recipes"
+            android:textSize="20dp" />
 
-    <RadioButton
-        android:id="@+id/recipeRBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recpie Name"
-        app:layout_constraintTop_toBottomOf="@id/searchET"
-        android:layout_marginTop="25dp"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="350dp" />
+    </LinearLayout>
 
-    <RadioButton
-        android:id="@+id/keywordRBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="keyword"
-        app:layout_constraintTop_toBottomOf="@id/recipeRBTN"
-        tools:layout_editor_absoluteX="59dp"
-         />
-
-    <RadioButton
-        android:id="@+id/ingredientRBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Ingredients"
-        app:layout_constraintTop_toBottomOf="@id/keywordRBTN"
-        tools:layout_editor_absoluteX="57dp" />
-
-    <Button
-        android:id="@+id/myaccountBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text="My Account"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="7dp"
-         />
-
-    <Button
-        android:id="@+id/signinBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
-        android:text="SignIn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="150dp" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

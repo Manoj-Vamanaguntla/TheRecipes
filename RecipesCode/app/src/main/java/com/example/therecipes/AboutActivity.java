@@ -33,7 +33,7 @@ public class AboutActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to the About page
-                startActivity(new Intent(AboutActivity.this, HomeActivity.class));
+                startActivity(new Intent(AboutActivity.this, MainActivity.class));
             }
         });
     }
