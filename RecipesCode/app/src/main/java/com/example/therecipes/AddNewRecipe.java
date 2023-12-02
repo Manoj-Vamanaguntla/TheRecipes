@@ -19,7 +19,7 @@ public class AddNewRecipe extends AppCompatActivity {
     private EditText recipeNameET;
     private EditText ingredientsET;
     private EditText procedureET;
-    private Button saveRecipeBtn;
+    private Button saveRecipeBtn,backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class AddNewRecipe extends AppCompatActivity {
         ingredientsET = findViewById(R.id.ingredientsET);
         procedureET = findViewById(R.id.procedureET);
         saveRecipeBtn = findViewById(R.id.saveRecipeBtn);
+        backBtn = findViewById(R.id.backBtn);
 
         Parse.initialize(this);
 
@@ -38,6 +39,13 @@ public class AddNewRecipe extends AppCompatActivity {
             public void onClick(View v) {
                 // Save the new recipe data
                 saveNewRecipe();
+            }
+        });
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the About page
+                startActivity(new Intent(AddNewRecipe.this, MainActivity.class));
             }
         });
     }
@@ -71,6 +79,12 @@ public class AddNewRecipe extends AppCompatActivity {
 
     private void goToRecipeDetailsActivity() {
         Intent intent = new Intent(this, RecipeCompleteDetailsActivity.class);
+        startActivity(intent);
+        finish(); // Optional: Close this activity to avoid stacking on the back stack
+    }
+
+    private void goToMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish(); // Optional: Close this activity to avoid stacking on the back stack
     }
