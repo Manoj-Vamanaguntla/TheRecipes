@@ -78,7 +78,7 @@ public class AddNewRecipe extends AppCompatActivity {
     }
 
     private void goToRecipeDetailsActivity() {
-        Intent intent = new Intent(this, RecipeCompleteDetailsActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish(); // Optional: Close this activity to avoid stacking on the back stack
     }
